@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/github-repositories-explorer/static/css/main.acf21d65.css",
-    "main.js": "/github-repositories-explorer/static/js/main.8f7ac3d9.js",
+    "main.css": "/github-repositories-explorer/static/css/main.a26f368f.css",
+    "main.js": "/github-repositories-explorer/static/js/main.f0d515d4.js",
     "static/js/787.b1bdeb13.chunk.js": "/github-repositories-explorer/static/js/787.b1bdeb13.chunk.js",
     "index.html": "/github-repositories-explorer/index.html",
-    "main.acf21d65.css.map": "/github-repositories-explorer/static/css/main.acf21d65.css.map",
-    "main.8f7ac3d9.js.map": "/github-repositories-explorer/static/js/main.8f7ac3d9.js.map",
+    "main.a26f368f.css.map": "/github-repositories-explorer/static/css/main.a26f368f.css.map",
+    "main.f0d515d4.js.map": "/github-repositories-explorer/static/js/main.f0d515d4.js.map",
     "787.b1bdeb13.chunk.js.map": "/github-repositories-explorer/static/js/787.b1bdeb13.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.acf21d65.css",
-    "static/js/main.8f7ac3d9.js"
+    "static/css/main.a26f368f.css",
+    "static/js/main.f0d515d4.js"
   ]
 }
