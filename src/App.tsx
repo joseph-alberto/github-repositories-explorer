@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react"
 import axios from "axios"
 
 function App() {
+  const [loading, setLoading] = useState(false)
   const [search, setSearch] = useState("")
   const searchRef = useRef<HTMLInputElement>(null)
   const [users, setUsers] = useState<User[]>([])
@@ -15,6 +16,7 @@ function App() {
 
   useEffect(() => {
     if(search !== ""){
+      setLoading(true)
       axios
       .get(`https://api.github.com/search/users?q=${search}&per_page=5`)
       .then((result) => {
@@ -26,6 +28,7 @@ function App() {
             }
           })
         )
+        setLoading(false)
       })
     }else{
       setUsers([])
@@ -40,12 +43,18 @@ function App() {
           type='text'
           placeholder='Enter username'
           ref={searchRef}
+          onKeyDown={(e)=>{
+            if(e.key === 'Enter'){
+              searchOnClick()
+            }
+          }}
         />
         <button
-          className='py-2 bg-sky-500 text-white text-sm'
+          disabled={loading}
+          className={`py-2 ${loading? `bg-stone-600` :`bg-sky-500 hover:bg-sky-600`} text-white text-sm`}
           onClick={searchOnClick}
         >
-          Search
+          {loading?"...":"Search"}
         </button>
         {users.length > 0 && <UserList users={users} search={search} />}
       </div>
