@@ -27,7 +27,7 @@ const Dropdown: FC<Props> = ({ user }) => {
   }
   return (
     <div className='flex flex-col gap-3'>
-      <DropdownButton click={toggleOpen} name={user.name} />
+      <DropdownButton click={toggleOpen} open={open} name={user.name} />
       <div className={`flex flex-col gap-3 ${open ? "flex" : "hidden"} `}>
         {repositories.map((repository, key) => (
           <DropdownItem repository={repository} key={key} />
@@ -39,15 +39,16 @@ const Dropdown: FC<Props> = ({ user }) => {
 
 type DropdownButtonProps = {
   name: string
+  open: boolean
   click: () => void
 }
 
-const DropdownButton: FC<DropdownButtonProps> = ({ name, click }) => (
+const DropdownButton: FC<DropdownButtonProps> = ({ name, open, click }) => (
   <div className='bg-neutral-200 py-1.5 px-2 cursor-pointer' onClick={click}>
     <div className='flex justify-between'>
       <p className='select-none'>{name}</p>
       <span>
-        <Unicons.UilAngleDown />
+        {open? <Unicons.UilAngleUp /> :<Unicons.UilAngleDown />}
       </span>
     </div>
   </div>
