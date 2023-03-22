@@ -17,7 +17,7 @@ After installing the depencies, now you can run the apps with this command.
 npm start
 ```
 
-Your apps now live on http://localhost:3000.
+Your site is now live on: http://localhost:3000.
 
 ## Stack used in this project:
 
