@@ -1,6 +1,6 @@
 # Github Repositories Explorer
 
-This project was made with React typescript.
+This project was made with React typescript.<br/>
 Deployed in: https://joseph-alberto.github.io/github-repositories-explorer
 
 ## Getting Started
