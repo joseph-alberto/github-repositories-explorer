@@ -26,7 +26,7 @@ const Dropdown: FC<Props> = ({ user }) => {
     setOpen(!open)
   }
   return (
-    <div className='flex flex-col gap-3'>
+    <div className='flex flex-col gap-3' data-testid="dropdown-container">
       <DropdownButton click={toggleOpen} open={open} name={user.name} />
       <div className={`flex flex-col gap-3 ${open ? "flex" : "hidden"} `}>
         {repositories.map((repository, key) => (
