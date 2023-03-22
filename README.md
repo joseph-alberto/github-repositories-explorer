@@ -5,13 +5,13 @@ Deployed in: https://joseph-alberto.github.io/github-repositories-explorer
 
 ## Getting Started
 
-To run this project, first you should install the depedencies with npm, run code below:
+To run this project, first you should install the depedencies with npm, run code below.
 
 ```shell
 npm install
 ```
 
-After installing the depencies, now you can run the apps with that command
+After installing the depencies, now you can run the apps.
 
 ```shell
 npm start
